@@ -41,4 +41,17 @@ header img {
     height: auto; /* Cela garantit que le logo garde ses proportions */
 }
 
-/* Ajoutez ici d'autres styles selon vos besoins */
+.header-banner {
+    background-image: url('logo_em.jpg'); /* Mettez à jour le chemin selon votre structure de fichiers */
+    background-size: cover; /* Ajuste l'image pour couvrir tout l'espace disponible */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    background-position: center; /* Centre l'image */
+    height: 200px; /* Ajustez la hauteur selon vos besoins */
+    width: 100%; /* S'étend sur toute la largeur de la page */
+}
+@media (max-width: 600px) {
+    .header-banner {
+        height: 100px; /* Hauteur plus petite pour les écrans plus petits */
+    }
+}
+
