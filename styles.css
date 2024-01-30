@@ -61,7 +61,12 @@ header img {
 }
 
 .title-section h1 {
-    /* Styles pour le titre */
-    /* Couleur, taille de la police, etc. */
+    text-align: center; /* Centrer le titre */
+    font-size: 2.5em; /* Rendre le titre plus grand. Ajustez la taille selon vos besoins */
+    color: #4a90e2; /* Couleur du titre. Choisissez la couleur que vous trouvez jolie */
+    margin-top: 20px; /* Espace au-dessus du titre */
+    margin-bottom: 20px; /* Espace en dessous du titre */
+    font-weight: bold; /* Rendre le texte en gras pour plus d'impact */
+    /* Vous pouvez ajouter d'autres styles comme la police de caractères, etc. */
 }
 
