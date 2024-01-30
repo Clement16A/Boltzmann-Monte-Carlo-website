@@ -67,3 +67,38 @@ header img {
     /* Vous pouvez ajouter d'autres styles comme la police de caractères, etc. */
 }
 
+#bibliography {
+    padding: 20px;
+    background-color: #f8f8f8; /* Couleur de fond légère */
+    border: 1px solid #eaeaea; /* Bordure subtile */
+    margin: 20px 0;
+}
+
+#bibliography h2 {
+    text-align: center;
+    color: #333;
+}
+
+#bibliography ul {
+    list-style: none; /* Supprime les puces */
+    padding: 0;
+}
+
+#bibliography li {
+    margin-bottom: 10px;
+    padding: 5px;
+    border-bottom: 1px solid #ddd; /* Ligne séparatrice entre les entrées */
+}
+
+#bibliography li:last-child {
+    border-bottom: none; /* Pas de ligne pour la dernière entrée */
+}
+
+#bibliography a {
+    color: #007bff; /* Couleur des liens */
+    text-decoration: none;
+}
+
+#bibliography a:hover {
+    text-decoration: underline;
+}
