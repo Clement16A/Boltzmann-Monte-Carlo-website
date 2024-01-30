@@ -46,7 +46,7 @@ header img {
     background-size: cover; /* Ajuste l'image pour couvrir tout l'espace disponible */
     background-repeat: no-repeat; /* Empêche la répétition de l'image */
     background-position: center; /* Centre l'image */
-    height: 420px; /* Ajustez la hauteur selon vos besoins */
+    height: 450px; /* Ajustez la hauteur selon vos besoins */
     width: 100%; /* S'étend sur toute la largeur de la page */
 }
 @media (max-width: 600px) {
@@ -101,4 +101,24 @@ header img {
 
 #bibliography a:hover {
     text-decoration: underline;
+}
+.centered-gif {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%; /* Ajustez la taille selon vos besoins */
+}
+
+.gif-columns {
+    display: flex;
+    justify-content: space-around;
+}
+
+.gif-column {
+    flex: 1; /* Assure une distribution égale de l'espace */
+}
+
+.gif-column img {
+    width: 100%; /* Ajustez la taille des GIFs dans les colonnes */
+    margin-bottom: 10px; /* Espacement entre les GIFs et les descriptions */
 }
