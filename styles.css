@@ -8,7 +8,7 @@ body {
 nav {
     background-color: #000;
     color: white;
-    padding: 10px 0;
+    padding: 25px 0;
 }
 
 nav ul {
@@ -139,8 +139,21 @@ header img {
 }
 
 .summary-content {
-    max-width: 800px; /* Ajustez selon la largeur désirée */
+    max-width: 1000px; /* Ajustez selon la largeur désirée */
     margin: 0 auto;
     font-size: 1.3em; /* Ajustez la taille de la police selon vos besoins */
     text-align: center;
+}
+
+.link-box {
+    background-color: #f2f2f2; /* Couleur de fond de la boîte */
+    text-align: center; /* Centrer le texte dans la boîte */
+    padding: 10px; /* Espace à l'intérieur de la boîte */
+    border-bottom: 2px solid #ccc; /* Ajouter une bordure en bas */
+}
+
+.link-box a {
+    color: #000; /* Couleur du texte du lien */
+    text-decoration: none; /* Enlever le soulignement du lien */
+    font-weight: bold; /* Rendre le texte du lien en gras */
 }
