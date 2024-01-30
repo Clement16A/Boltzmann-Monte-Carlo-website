@@ -102,12 +102,7 @@ header img {
 #bibliography a:hover {
     text-decoration: underline;
 }
-.centered-gif {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%; /* Ajustez la taille selon vos besoins */
-}
+
 
 .gif-columns {
     display: flex;
@@ -121,4 +116,11 @@ header img {
 .gif-column img {
     width: 100%; /* Ajustez la taille des GIFs dans les colonnes */
     margin-bottom: 10px; /* Espacement entre les GIFs et les descriptions */
+}
+.centered-gif {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%; /* Ajustez ce pourcentage pour changer la taille */
+    max-width: 200px; /* Maximum width */
 }
