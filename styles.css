@@ -120,23 +120,58 @@ header img {
 
 .gif-columns {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .gif-column {
     flex: 1; /* Assure une distribution égale de l'espace */
+    text-align: center; /* Centre le contenu de la colonne */
 }
 
 .gif-column img {
     width: 100%; /* Ajustez la taille des GIFs dans les colonnes */
     margin-bottom: 10px; /* Espacement entre les GIFs et les descriptions */
 }
+
+.gif-column p {
+    font-size: 1.4em; /* Augmente la taille du texte */
+    text-align: center; /* Centre le texte sous les GIFs */
+    margin-top: 0; /* Réduit l'espace au-dessus du texte, si nécessaire */
+    margin-bottom: 20px; /* Espacement après le texte, ajustez selon les besoins */
+}
 .centered-gif {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 60%; /* Ajustez ce pourcentage pour changer la taille */
-    max-width: 400px; /* Maximum width */
+    width: 70%; /* Ajustez ce pourcentage pour changer la taille */
+    max-width: 600px; /* Maximum width */
+}
+.centered-gif ~ p {
+    text-align: center; /* Centre le texte sous le GIF */
+    font-size: 1.5em; /* Ajustez la taille du texte */
+    /* Ajoutez ici d'autres styles de texte si nécessaire */
+}
+.test-explanations {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #f9f9f9; /* Couleur de fond légère */
+    border: 1px solid #ddd; /* Bordure subtile */
+    border-radius: 20px; /* Coins arrondis */
+}
+
+.test-explanations p {
+    text-align: justify; /* Justifie le texte pour une lecture fluide */
+    line-height: 1.6; /* Espacement des lignes pour une meilleure lisibilité */
+    margin-bottom: 15px; /* Espacement entre les paragraphes */
+    font-size: 1.5em; /* Ajustez la taille du texte */
+
+}
+
+.test-explanations p strong {
+    font-weight: bold; /* Rend le titre de chaque test en gras */
+    color: #0056b3; /* Couleur pour les titres des tests */
+    display: block; /* Affiche le titre sur une nouvelle ligne */
+    margin-bottom: 5px; /* Espacement après le titre du test */
 }
 #summary {
     display: flex;

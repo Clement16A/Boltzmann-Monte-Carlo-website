@@ -23,7 +23,7 @@
         </nav>
     
         <header>
-        <h1>Solving the linear Boltzmann equation using Monte Carlo methods</h1>
+        <h1>Solving the linear Boltzmann equation using Monte-Carlo methods</h1>
         </header>
     </body>
 
@@ -31,27 +31,36 @@
     <section id="numerical-results">
         <h2>Numerical Results</h2>
         <img src="animation1500pts.gif" alt="Description of the GIF" class="centered-gif">
-        <p>Here is an example of the sampling of \(V_p\) on the unit sphere with 1500 points</p>
+        <p>Here is an example of the sampling of \(V_p\) on the unit sphere with 1500 points. In the suit base there is a test, checking if the sampling is following the Kolmogorov-Smirnov law</p>
+        <div class="test-explanations">
+            <p>In this section of our study, we delve into a series of critical tests designed to evaluate various aspects of particle transport and interaction. These tests are pivotal in understanding the nuances of particle behavior under different conditions. The left column represent the time evolution of the solution by taking an heaviside step and the right column represent the same evolution taking a smooth one.</p>
+    
+            <p><strong>Advection (Transparency) \(\sigma_s = 0\) \(\sigma_t = 0\):</strong> The advection test, also referred to as the transparency test, is a fundamental component of our analysis. In this test, we examine how particles traverse through a medium without interacting with it. This scenario is crucial for understanding the unimpeded movement of particles and serves as a baseline for more complex interactions. In this case we expect a translation of the initial solution without changing the density value. </p>
+    
+            <p><strong>Absorption \(\sigma_s = 0\) \(\sigma_t = 1\):</strong> Moving beyond simple advection, the absorption test introduces a scenario where particles interact with the medium by being absorbed. This test is critical for understanding how particles lose their energy and cease to propagate further. It's particularly relevant in scenarios where energy dissipation and medium saturation are key factors, such as in radiation shielding and nuclear reactor physics.</p>
+    
+            <p><strong>Absorption Scattering \(\sigma_s = 0.5\) \(\sigma_t = 1\):</strong> This test combines elements of both absorption and scattering. Here, we explore the dual phenomenon where particles are not only absorbed but also scattered upon interaction with the medium. </p>
+        </div>
     
         <div class="gif-columns">
             <!-- Colonne 1 -->
             <div class="gif-column">
-                <img src="gif1.gif" alt="Description">
-                <p>Description for gif1</p>
-                <img src="gif2.gif" alt="Description">
-                <p>Description for gif2</p>
-                <img src="gif3.gif" alt="Description">
-                <p>Description for gif3</p>
+                <img src="advection.gif" alt="Description">
+                <p>advection or transparency</p>
+                <img src="absorption.gif" alt="Description">
+                <p>absorption</p>
+                <img src="absorption_scattering.gif" alt="Description">
+                <p>absorption scattering</p>
             </div>
             
             <!-- Colonne 2 -->
             <div class="gif-column">
-                <img src="gif4.gif" alt="Description">
-                <p>Description for gif4</p>
-                <img src="gif5.gif" alt="Description">
-                <p>Description for gif5</p>
-                <img src="gif6.gif" alt="Description">
-                <p>Description for gif6</p>
+                <img src="advection.gif" alt="Description">
+                <p>advection or transparency</p>
+                <img src="absoprtion_Hvcont.gif" alt="Description">
+                <p>absorption</p>
+                <img src="absScatt_Hvcont.gif" alt="Description">
+                <p>absorption scattering</p>
             </div>
         </div>
     </section>
