@@ -26,6 +26,13 @@ nav ul li {
 nav a {
     color: white;
     text-decoration: none;
+    padding: 5px 10px; /* Ajout de padding pour un meilleur visuel */
+    border-radius: 5px; /* Optionnel: pour arrondir les coins du cadre */
+}
+
+nav a.active {
+    background-color: #444; /* Couleur de fond différente pour l'onglet actif */
+    color: #fff; /* Couleur du texte pour l'onglet actif */
 }
 
 header {
@@ -128,12 +135,12 @@ header img {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 100px;
 }
 
 .summary-content {
     max-width: 600px; /* Ajustez selon la largeur désirée */
     margin: 0 auto;
-    font-size: 1.3em; /* Ajustez la taille de la police selon vos besoins */
+    font-size: 2.1em; /* Ajustez la taille de la police selon vos besoins */
     text-align: center;
 }
