@@ -121,6 +121,6 @@ header img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%; /* Ajustez ce pourcentage pour changer la taille */
-    max-width: 200px; /* Maximum width */
+    width: 60%; /* Ajustez ce pourcentage pour changer la taille */
+    max-width: 400px; /* Maximum width */
 }
