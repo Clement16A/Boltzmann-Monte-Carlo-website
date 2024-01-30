@@ -46,7 +46,7 @@ header img {
     background-size: cover; /* Ajuste l'image pour couvrir tout l'espace disponible */
     background-repeat: no-repeat; /* Empêche la répétition de l'image */
     background-position: center; /* Centre l'image */
-    height: 400px; /* Ajustez la hauteur selon vos besoins */
+    height: 420px; /* Ajustez la hauteur selon vos besoins */
     width: 100%; /* S'étend sur toute la largeur de la page */
 }
 @media (max-width: 600px) {
