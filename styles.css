@@ -75,15 +75,18 @@ header img {
 }
 
 #bibliography {
-    padding: 20px;
-    background-color: #f8f8f8; /* Couleur de fond légère */
-    border: 1px solid #eaeaea; /* Bordure subtile */
-    margin: 20px 0;
+    padding: 40px;
+    background-color: #A6BFE5; /* Couleur de fond légère */
+    border: 1px solid #35517C; /* Bordure subtile */
+    margin: 40px auto; /* Augmentation de la marge et centrage */
+    max-width: 80%; /* Réduction de la largeur maximale pour moins de proximité avec les bords */
+    font-size: 1.1em; /* Augmentation de la taille du texte */
 }
 
 #bibliography h2 {
     text-align: center;
     color: #333;
+    font-size: 1.4em; /* Augmentation de la taille du titre */
 }
 
 #bibliography ul {
@@ -92,8 +95,8 @@ header img {
 }
 
 #bibliography li {
-    margin-bottom: 10px;
-    padding: 5px;
+    margin-bottom: 15px; /* Augmentation de l'espacement entre les entrées */
+    padding: 10px; /* Augmentation de l'espace intérieur pour chaque entrée */
     border-bottom: 1px solid #ddd; /* Ligne séparatrice entre les entrées */
 }
 
