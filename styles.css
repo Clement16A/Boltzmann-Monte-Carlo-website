@@ -139,9 +139,9 @@ header img {
 }
 
 .summary-content {
-    max-width: 1000px; /* Ajustez selon la largeur désirée */
+    max-width: 1200px; /* Ajustez selon la largeur désirée */
     margin: 0 auto;
-    font-size: 1.3em; /* Ajustez la taille de la police selon vos besoins */
+    font-size: 1.4em; /* Ajustez la taille de la police selon vos besoins */
     text-align: center;
 }
 
