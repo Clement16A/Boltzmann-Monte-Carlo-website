@@ -37,7 +37,7 @@ header img {
     max-width: 100px; /* Ajustez selon la taille souhaitée */
 }
 .logo {
-    width: 20%; /* Ajustez cette valeur selon la taille souhaitée */
+    width: 200px; /* Ajustez cette valeur selon la taille souhaitée */
     height: auto; /* Cela garantit que le logo garde ses proportions */
 }
 

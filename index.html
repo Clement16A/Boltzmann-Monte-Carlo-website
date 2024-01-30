@@ -34,9 +34,83 @@
 
     <section id="charts">
         <h2>Graphiques</h2>
-        <!-- Inclure ici des graphiques générés à l'aide de bibliothèques de graphiques comme Chart.js -->
-        <!-- Exemple : <canvas id="myChart" width="400" height="200"></canvas> -->
-    </section>
+        <h1 id="introduction">Introduction</h1>
+        <h2 id="terms-and-definitions">Terms and definitions</h2>
+        <p>The transport equation plays a crucial role in describing the behavior of particles in various physical systems. One of its important derivatives, the linear Boltzmann equation, is governed by the evolution of particle distribution in phase space. In this project, a numerical solution for the linear Boltzmann equation is developed utilizing the Monte Carlo method. The report is structured as follows:</p>
+        <ul>
+        <li><p><strong>Transport Equation:</strong> The fundamental transport equation is introduced, providing a basis for understanding the derivation of the linear Boltzmann equation.</p></li>
+        <li><p><strong>Linear Boltzmann Equation:</strong> Building upon the transport equation, the linear Boltzmann equation is explored, emphasizing its significance in characterizing particle transport phenomena.</p></li>
+        <li><p><strong>Monte Carlo Method for Linear Boltzmann Equation:</strong> The approach to solving the linear Boltzmann equation using the Monte Carlo method is presented, along with a discussion of the advantages and challenges associated with this numerical technique.</p></li>
+        <li><p><strong>Semi-Analog Monte Carlo Scheme:</strong> A semi-analog Monte Carlo scheme is introduced as an innovative strategy to enhance the efficiency and accuracy of simulations.</p></li>
+        </ul>
+        <h2 id="context-and-applications">Context and Applications</h2>
+        <h4 id="section"></h4>
+        <p>The linear Boltzmann equation finds applications in a wide range of industrial and research contexts. Notable examples include its use in nuclear reactor physics, radiation shielding design, medical imaging, and astrophysics. Applications extend to industries such as nuclear energy, healthcare, and aerospace, where accurate simulations of particle transport are crucial for optimizing designs and ensuring safety protocols.</p>
+        <p>In the realm of academic research, the linear Boltzmann equation serves as a cornerstone in the study of rarefied gas dynamics, plasma physics, and neutron transport. Collaborations between universities, research institutions, and companies contribute to advancements in understanding and solving complex problems associated with particle transport phenomena.</p>
+        <p>This project aims to contribute to the broader understanding and application of the linear Boltzmann equation, with a focus on developing efficient numerical methods for solving this intricate problem.</p>
+        <h1 id="mathematical-analysis">Mathematical analysis</h1>
+        <h4 id="section-1"></h4>
+        <p>Here is a brief summary of the various existences and uniqueness of solutions based on different cases of equations to be solved. The primary source used is the transport and diffusion document.</p>
+        <h2 id="transport-equation">Transport Equation</h2>
+        <h4 id="section-2"></h4>
+        <p>In this section, the solutions of the transport equation, a particular case of the Boltzmann equation defined below, will be examined.</p>
+        <p><span class="math display">\[\label{transport}
+        \frac{\partial f}{\partial t}(t,x)+v \cdot \nabla_x f(t,x) + a(t,x)f(t,x) = S(t,x), \quad x \in \mathbb{R}^N, \quad t&gt;0.\]</span></p>
+        <p>where <span class="math inline">\(f\)</span> is the unknown function, <span class="math inline">\(a\)</span> is the given damping or amplification rate, and <span class="math inline">\(S\)</span> is the given source term.</p>
+        <h3 id="cauchy-problem">Cauchy Problem</h3>
+        <h4 id="section-3"></h4>
+        <p>Let the following Cauchy problem without absorption or source term be considered :</p>
+        <p><span class="math display">\[\begin{cases}
+        \frac{\partial f}{\partial t}(t,x)+v \cdot \nabla_x f(t,x)=0, \quad x \in \mathbb{R}^N, \quad t&gt;0.\\
+        f(0,x)) = f^{in}(x)
+        \end{cases}\]</span></p>
+        <p>where <span class="math inline">\(f^{in}(x)\)</span> is the seeked initial value of <span class="math inline">\(f\)</span>’s density. If <span class="math inline">\(f^{in} \in \mathcal{C}^1(\mathbb{R}^n)\)</span>, then using the method of characteristics, the uniqueness of the solution <span class="math inline">\(f \in \mathcal{C}^1(\mathbb{R}_+ \times \mathbb{R}^n)\)</span> for the Cauchy problem can easily be demonstrated. This solution is given as follows :</p>
+        <p><span class="math display">\[f(t,x)=f^{in}(x-tv) \quad \forall (t,x) \in \mathbb{R}_+ \times \mathbb{R}^n\]</span></p>
+        <h4 id="section-4"></h4>
+        <p>This time, a damping and a source term are considered, assuming they belong to <span class="math inline">\(\mathcal{C}^1(\mathbb{R}_+ \times \mathbb{R}^n)\)</span>. The considered Cauchy problem is given as follows:</p>
+        <p><span class="math display">\[\begin{cases}
+        \frac{\partial f}{\partial t}(t,x)+v \cdot \nabla_x f(t,x) + a(t,x)f(t,x) = S(t,x), \quad x \in \mathbb{R}^N, \quad t&gt;0.\\
+        f(0,x)) = f^{in}(x)
+        \end{cases}\]</span></p>
+        <p>Here the uniqueness of the solution remains unchanged so by the same method, the solution is given by :</p>
+        <p><span class="math display">\[f(t,x)=f^{in}(x-tv) e^{-\int_0 ^t a(\tau,x+(t-\tau)v)d\tau} + \int_0 ^t  e^{-\int_0 ^t a(\tau,x+(t-\tau)v)d\tau} S(s,x+(s-t)v)ds \quad \forall (t,x) \in \mathbb{R}_+ \times \mathbb{R}^n\]</span></p>
+        <p>Next, a partial demonstration of the previous formula is suggested, using the method of characteristics. For more details, the reader is refered to <span class="citation" data-cites="allaire:2019"></span>.</p>
+        <p>Let <span class="math inline">\(y \in \mathbb{R}\)</span>, and consider the characteristic curve emanating from <span class="math inline">\(y\)</span> at <span class="math inline">\(t=0\)</span>, given by :</p>
+        <p><span class="math display">\[\{(t,\gamma(t)),  t\geq 0\} , \text{ where } \gamma (t)=y+tv\]</span></p>
+        <p>If <span class="math inline">\(f \in \mathcal{C}^1(\mathbb{R}_+ \times \mathbb{R}^n\)</span> is the solution of the previous Cauchy problem, then <span class="math inline">\(t \mapsto f(t,\gamma(t))\)</span> is of <span class="math inline">\(\mathcal{C}^1\)</span> class on <span class="math inline">\(\mathbb{R}_+\)</span>, and</p>
+        <p><span class="math display">\[\begin{aligned}
+        \frac{d f}{d t}(t,\gamma(t))&amp;=(\frac{\partial f}{\partial t}
+        v \cdot \nabla_x f(t,x))(t,\gamma(t)) \\ &amp;= S(t,\gamma(t))-a(t,\gamma(t))f(t,\gamma(t)), \quad t&gt;0.
+        \end{aligned}\]</span></p>
+        <p>The previous partial differential equation is now reduced to an ordinary differential equation (ODE) of the form:</p>
+        <p><span class="math display">\[\begin{cases}
+        u&#39;(t)+\alpha(t)u(t)=\Sigma(t), \quad t&gt;0,\\
+        u(0)=u^{in}
+        \end{cases}\]</span></p>
+        <p>The well-known solution is calculated using the constant variation method:</p>
+        <p><span class="math display">\[u(t) = u^{in} e^{-A(t)} + \int_{0}^{t} e^{-A(t)-A(s)}\Sigma(s)ds, \text{ with } A(t)=\int_{0}^{t} \alpha (\tau) d\tau.\]</span></p>
+        <p>The following expression is then obteined by applying this to the Cauchy problem along the characteristic curve from <span class="math inline">\(y\)</span> at <span class="math inline">\(t=0\)</span> :</p>
+        <p><span class="math display">\[f(t,y+tv) = f^{in}(y) e^{\int_{0}^{t}a(\tau,y+\tau v)d\tau} + \int_{0}^{t} e^{\int_{0}^{t}a(\tau,y+\tau v)d\tau}S(s,y+sv)ds, \quad y\in \mathbb{R}^n, t \geq 0.\]</span></p>
+        <p>Finally, the expected expression is deduced replacing the dummy variable <span class="math inline">\(y\)</span> with <span class="math inline">\(x-tv\)</span>.</p>
+        <h3 id="boundary-value-problems">Boundary Value Problems</h3>
+        <h4 id="section-5"></h4>
+        <p>In the preceding section, outcomes relevant to the exploration of unrestricted spatial variables in <span class="math inline">\(\mathbb{R}^n\)</span> were provided. However, for the majority of physical problems, this spatial unrestriction has no sens. That is why a problem of the boundary value type is more interesting. In this section, the set <span class="math inline">\(\Omega\)</span>, which is an open set with a <span class="math inline">\(\mathcal{C}^1\)</span> boundary in <span class="math inline">\(\mathbb{R}^n\)</span> is considered. Additionally, <span class="math inline">\(v \in \mathbb{R}^n\backslash \{0\}\)</span> is considered.</p>
+        <h4 id="special-case-without-absorption-or-source-term">Special Case without Absorption or Source Term</h4>
+        <h4 id="section-6"></h4>
+        <p>Let <span class="math inline">\(\Omega\)</span> be convex, <span class="math inline">\(f_b^- \in \mathcal{C}^1(\mathbb{R}_+ \times \partial \Omega^-)\)</span> and <span class="math inline">\(f^{in} \in \mathcal{C}^1(\overline{\Omega})\)</span>, where <span class="math inline">\(\partial \Omega^- = \{x\in\partial \Omega~ | ~ v\cdot n_x&lt;0\}\)</span>, then the problem:</p>
+        <p><span class="math display">\[\begin{cases}
+        \frac{\partial f}{\partial t}(t,x)+v \cdot \nabla_x f(t,x)=0, \quad x \in \mathbb{R}^N, \quad t&gt;0.\\
+        \mathchoice{\setbox 1\hbox{${\displaystyle f}_{\scriptstyle \partial \Omega}$}
+                {f\,\smash{\vrule height .8\ht 1 depth .85\dp 1}}_{\,\partial \Omega}}{\setbox 1\hbox{${\textstyle f}_{\scriptstyle \partial \Omega}$}
+                {f\,\smash{\vrule height .8\ht 1 depth .85\dp 1}}_{\,\partial \Omega}}{\setbox 1\hbox{${\scriptstyle f}_{\scriptscriptstyle \partial \Omega}$}
+                {f\,\smash{\vrule height .8\ht 1 depth .85\dp 1}}_{\,\partial \Omega}}{\setbox 1\hbox{${\scriptscriptstyle f}_{\scriptscriptstyle \partial \Omega}$}
+                {f\,\smash{\vrule height .8\ht 1 depth .85\dp 1}}_{\,\partial \Omega}}= f_b^-\\
+        \mathchoice{\setbox 1\hbox{${\displaystyle f}_{\scriptstyle t=0}$}
+                {f\,\smash{\vrule height .8\ht 1 depth .85\dp 1}}_{\,t=0}}{\setbox 1\hbox{${\textstyle f}_{\scriptstyle t=0}$}
+                {f\,\smash{\vrule height .8\ht 1 depth .85\dp 1}}_{\,t=0}}{\setbox 1\hbox{${\scriptstyle f}_{\scriptscriptstyle t=0}$}
+                {f\,\smash{\vrule height .8\ht 1 depth .85\dp 1}}_{\,t=0}}{\setbox 1\hbox{${\scriptscriptstyle f}_{\scriptscriptstyle t=0}$}
+                {f\,\smash{\vrule height .8\ht 1 depth .85\dp 1}}_{\,t=0}}= f^{in}(x)
+        \end{cases}\]</span></p>    </section>
 
     <section id="download">
         <h2>Download the report</h2>
