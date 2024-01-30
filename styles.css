@@ -53,7 +53,7 @@ header img {
     background-size: cover; /* Ajuste l'image pour couvrir tout l'espace disponible */
     background-repeat: no-repeat; /* Empêche la répétition de l'image */
     background-position: center; /* Centre l'image */
-    height: 450px; /* Ajustez la hauteur selon vos besoins */
+    height: 400px; /* Ajustez la hauteur selon vos besoins */
     width: 100%; /* S'étend sur toute la largeur de la page */
 }
 @media (max-width: 600px) {
@@ -76,7 +76,7 @@ header img {
 
 #bibliography {
     padding: 50px;
-    background-color: #6880a4; /* Couleur de fond légère */
+    background-color: #6e91c4; /* Couleur de fond légère */
     border: 1px solid #192940; /* Bordure subtile */
     margin: 80px auto; /* Augmentation de la marge et centrage */
     max-width: 80%; /* Réduction de la largeur maximale pour moins de proximité avec les bords */
@@ -85,7 +85,7 @@ header img {
 
 #bibliography h2 {
     text-align: center;
-    color: #333;
+    color: #1b1313;
     font-size: 1.4em; /* Augmentation de la taille du titre */
 }
 
@@ -95,7 +95,7 @@ header img {
 }
 
 .empty-space {
-    height: 250px; /* Ou toute autre hauteur */
+    height: 280px; /* Ou toute autre hauteur */
 }
 
 #bibliography li {
@@ -109,7 +109,7 @@ header img {
 }
 
 #bibliography a {
-    color: #007bff; /* Couleur des liens */
+    color: #1b2632; /* Couleur des liens */
     text-decoration: none;
 }
 
