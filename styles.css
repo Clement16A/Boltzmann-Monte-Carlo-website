@@ -157,3 +157,18 @@ header img {
     text-decoration: none; /* Enlever le soulignement du lien */
     font-weight: bold; /* Rendre le texte du lien en gras */
 }
+
+#equation {
+    /* Styles pour la section d'équation */
+}
+
+.equation-content {
+    /* Styles pour le contenu de l'équation */
+    text-align: center; /* Centrer le contenu */
+}
+
+.equation-ref {
+    font-style: italic;
+    text-align: right;
+    margin-right: 20px;
+}
