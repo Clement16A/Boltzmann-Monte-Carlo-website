@@ -75,12 +75,12 @@ header img {
 }
 
 #bibliography {
-    padding: 40px;
-    background-color: #A6BFE5; /* Couleur de fond légère */
-    border: 1px solid #35517C; /* Bordure subtile */
-    margin: 40px auto; /* Augmentation de la marge et centrage */
+    padding: 50px;
+    background-color: #6880a4; /* Couleur de fond légère */
+    border: 1px solid #192940; /* Bordure subtile */
+    margin: 80px auto; /* Augmentation de la marge et centrage */
     max-width: 80%; /* Réduction de la largeur maximale pour moins de proximité avec les bords */
-    font-size: 1.1em; /* Augmentation de la taille du texte */
+    font-size: 1.3em; /* Augmentation de la taille du texte */
 }
 
 #bibliography h2 {
@@ -92,6 +92,10 @@ header img {
 #bibliography ul {
     list-style: none; /* Supprime les puces */
     padding: 0;
+}
+
+.empty-space {
+    height: 250px; /* Ou toute autre hauteur */
 }
 
 #bibliography li {
